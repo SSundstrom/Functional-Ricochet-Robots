@@ -142,14 +142,14 @@ or not. -}
 view : Model -> Html Msg
 view model =
   let
-    iw = internalWalls model.og
+    iw = internalWalls model.og -- och det här behöver ses över...
   in
     div [ class "container"] [
-          div [ style [("height", "900px")]] [
-                showBoard model.og.b.s,
-                showRobots model.r model.og.b.s,
+          div [ class "board"] [
+                showBoard model
+                showRobots model.r model.og.b.s, -- Typ härifrån
                 showWalls (model.og.b.v ++ model.og.b.h) model.og.b.s,
-                showMarkers iw model.og.m model.og.b.s
+                showMarkers iw model.og.m model.og.b.s  -- till hit behöver göras om.
               ],
                 showControls model.og.gm model.c,
                 if hasWon model then
@@ -162,7 +162,7 @@ until a game has been generated -}
 baseGame : Original
 baseGame = {b = emptyBoard 10,
             r = [],
-            m= [],
+            m = [],
             gm = {
                     c = Red,
                     s = Moon,

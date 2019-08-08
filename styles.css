@@ -1,10 +1,40 @@
+.app {
+  width: 80%;
+  align-self: center;
+}
+
 .container {
   font-family:  Courier New;
   display: grid;
-  grid-template-columns: 900px 200px;
+  grid-template-columns: 70% 30%;
   align-items: center;
   justify-content: center;
 }
+
+.board {
+  width: 100%;
+  height: 100%;
+}
+
+.layer { 
+  display: grid;
+  grid-auto-columns: 5%;
+  grid-auto-rows: 5%;
+  position: absolute;
+}
+
+.robot-z {
+  z-index: 20;
+}
+
+.wall-z {
+  z-index: 10;
+}
+
+.marker-z {
+  z-index: 15;
+}
+
 .control-container {
   display: inline-flex;
   flex-direction: column;
@@ -27,40 +57,16 @@
 
 .marker {
   width: 90%;
-  height: 90%;
   margin-top: 5%;
   margin-left: 5%;
 }
 
 .goal-marker {
-  width: 200px;
-}
-.btn {
-  border-radius:  10px;
-  font-family:  Courier New;
-  color:  #ffffff;
-  background:  #09cdda;
-  text-decoration:  none;
-}
-
-.btn-lg {
-  font-size:  50px;
-  padding:  10px 20px 10px 20px;
-  margin:  10px 20px 10px 20px;
-}
-
-.btn-sm {
-  font-size:  25px;
-  width: 100%;
-  padding:  5px 10px 5px 10px;
-  margin:  5px 10px 5px 10px;
-}
-.btn-dir {
-  width: 100%;
+  width: 90%;
 }
 
 .robot-cell {
-  font-size: small;
+  font-size: 0px;
   display: grid;
   grid-template-rows: 15% 70% 15%;
   grid-template-columns: 15% 70% 15%;
@@ -69,7 +75,6 @@
 
 .robot {
   width: 100%;
-  height: 70%;
   grid-column: 2;
   grid-row: 2;
 }
@@ -114,4 +119,27 @@
   text-decoration: none;
   font-weight: bold;
   -webkit-text-stroke: 2px white;
+}
+.btn {
+  border-radius:  10px;
+  font-family:  Courier New;
+  color:  #ffffff;
+  background:  #09cdda;
+  text-decoration:  none;
+}
+
+.btn-lg {
+  font-size:  50px;
+  padding:  10px 20px 10px 20px;
+  margin:  10px 20px 10px 20px;
+}
+
+.btn-sm {
+  font-size:  25px;
+  width: 100%;
+  padding:  5px 10px 5px 10px;
+  margin:  5px 10px 5px 10px;
+}
+.btn-dir {
+  width: 100%;
 }

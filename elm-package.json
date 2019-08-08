@@ -10,8 +10,7 @@
         "Common",
         "Robot",
         "Board",
-        "Marker",
-        "Styles"
+        "Marker"
     ],
     "dependencies": {
         "elm-community/elm-test": "4.2.0 <= v < 5.0.0",

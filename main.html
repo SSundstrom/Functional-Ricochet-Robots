@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Main</title>
+    <title>Functional Ricochet Robots</title>
     <style>
       html,head,body {
-        padding:0;
+        padding:10px;
         margin:0;
       }
     </style>
@@ -13,8 +13,13 @@
    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <script type="text/javascript">
-      var main = Elm.Main.fullscreen();
+
+    <div id="app"></div>
+
+    <script>
+        var node = document.getElementById("app");
+        var app = Elm.Main.embed(node);
     </script>
+    
   </body>
 </html>
